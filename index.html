@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="preloader">
+</div>
 <div id="header">
     <div class="container">
         <nav>
@@ -26,7 +28,6 @@
     </div>
 </div>
 <!----------------about------------------->
-
 <div id="about">
     <div class="container">
         <div class="row">
@@ -39,7 +40,14 @@
         </div>
     </div>
 </div>
-
-
+<!-----------------preloader----------------->
+<script>
+    function closepreloader() {
+        document.getElementById("preloader").style.display = 'none';
+    }
+    window.addEventListener("load", function () {
+        setTimeout(closepreloader, 1000);
+    });
+</script>
 </body>
 </html>
