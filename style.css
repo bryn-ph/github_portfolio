@@ -96,6 +96,7 @@ nav ul li a:hover::after{
     scale: 50%;
 }
 .user2{
+    margin-left: 30px;
     scale: 40%;
 }
 .row{
