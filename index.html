@@ -33,10 +33,36 @@
         <div class="row">
             <div class="about-col-1">
                 <img src="images/user.png" class="user">
+                <img src="images/user2.png" class="user2">
             </div>
             <div class="about-col-2">
                 <h1 class = "sub-title">About Me</h1>
-                <p class = "sub-text">Currently studying a bachelor of Software Engineering at RMIT in Melbourne. Interested in all things tech and passionate about full-stack development; I currently utilize Java, C++, HTML, CSS, and JavaScript. Always open to learning new things, and meeting new people.</p>
+                <p class = "sub-text">Currently studying a bachelor of Software Engineering at RMIT in Melbourne. Passionate about AI, full-stack development, and web-dev. Always open to learning new things, meeting new people, and finding new opportunities.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>UI / UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>Back-End Development</span><br>Maintaining Databases, functions, and processes for applications</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2023 - Present</span><br>Bachelor of Software Engineering | RMIT</li>
+                        <li><span>2022 - 2023</span><br>Diploma of Visual Arts and Diploma of Screen and Media | AIE</li>
+                        <li><span>2019 - 2020</span><br>Year 12 Certificate | Canberra College</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2023 - Present</span><br>3D Model / Printing Consultant | Mawsons Concrete & Quarries</li>
+                        <li><span>2021 - Present</span><br> Games and Tech Salesperson | JB Hi-Fi</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -50,5 +76,22 @@
         setTimeout(closepreloader, 1000);
     });
 </script>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
