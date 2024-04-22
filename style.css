@@ -184,16 +184,22 @@ nav ul li a:hover::after{
     margin-top: 50px;
     position: sticky;
 }
-.work{
+.work {
     border-radius: 10px;
+    max-width: 500px;
+    max-height: 400px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: top;
+    justify-content: center;
 }
+
 .work img{
-    width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
+    transform: scale(0.8);
 }
 .layer{
     width: 100%;
